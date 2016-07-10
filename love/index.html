@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>Eternal Love</title>
+    <script src="http://libs.baidu.com/jquery/2.0.3/jquery.min.js"></script>
+    <script src="javascripts/jquery-starfield.js"></script>
+    <script src="javascripts/helper.js"></script>
+    <script src="javascripts/garden.js"></script>
+    <link rel="stylesheet" href="stylesheets/main.css">
+  </head>
+
+  <body>
+    <div id="starry-sky"></div>
+    <div class="content">
+      <div id="loveHeart">
+        <canvas id="garden"></canvas>
+        <div id="words">
+          <div id="messages">
+            <span class="signature">Emily</span>, we've been in love for
+            <div id="elapseClock"></div>
+          </div>
+          <div id="loveu">
+						<div>Yours, <span class="signature">alex4814</span></div>
+					</div>
+        </div>
+      </div>
+    </div>
+    <footer class="copyright">
+      Copyright (c) 2016 Copyright <a href='http://ruishengfu.me'>alex4814</a> All Rights Reserved.
+    </footer>
+    <script>
+      $("#starry-sky").starfield({
+        starDensity: 0.8,
+        mouseScale: 0.7,
+        seedMovement: true
+      });
+
+      var offsetX = $("#loveHeart").width() / 2;
+      var offsetY = $("#loveHeart").height() / 2 - 55;
+      var together = new Date();
+      together.setFullYear(2015, 6, 11);
+      together.setHours(00);
+      together.setMinutes(00);
+      together.setSeconds(00);
+      together.setMilliseconds(0);
+      var displayMode = 1;
+
+      $("#elapseClock").click(function() {
+        displayMode *= -1;
+        timeElapse(together, displayMode);
+      });
+
+      setTimeout(function() {
+        startHeartAnimation();
+      }, 3000);
+
+      timeElapse(together, displayMode);
+      setInterval(function() {
+        timeElapse(together, displayMode);
+      }, 500);
+    </script>
+  </body>
+
+</html>

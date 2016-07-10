@@ -1,0 +1,97 @@
+@font-face {
+  font-family: digit;
+  src: url('../fonts/digital-7_mono.ttf') format("truetype");
+}
+@font-face {
+  font-family: raleway;
+  src: url('../fonts/Raleway-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: shake;
+  src: url('../fonts/shakeitnicholas.ttf') format('truetype');
+}
+
+* {
+  z-index: 1;
+}
+
+a:link {
+  color: #666600
+}
+
+a:hover {
+  color: #CCCC66
+}
+
+footer {
+  position: relative;
+}
+
+#starry-sky {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.signature {
+  font-family: "shake";
+  font-size: 36px;
+}
+
+.copyright {
+  font-family: "raleway", "sans-serif";
+  text-align: center;
+  margin: 10px;
+  color: #666;
+  font-size: 12px;
+}
+
+#loveHeart {
+  position: relative;
+  margin: 0 auto;
+	width: 670px;
+	height: 625px;
+  pointer-events: none;
+}
+
+#garden {
+	width: 100%;
+	height: 100%;
+}
+
+#elapseClock {
+	text-align: right;
+	font-size: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+  z-index: 2;
+  pointer-events: visiblePainted;
+}
+
+#words {
+	font-family: "Georgia", "sans-serif";
+	width: 500px;
+	font-size: 28px;
+	color:#666;
+}
+
+#messages{
+	display: none;
+}
+
+#elapseClock .digit{
+	font-family: "digit";
+	font-size: 36px;
+}
+
+#loveu{
+	padding: 5px;
+	font-size: 22px;
+	margin-top: 80px;
+	margin-right: 120px;
+	text-align: right;
+	display: none;
+}
